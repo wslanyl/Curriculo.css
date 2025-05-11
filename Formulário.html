@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Contato</title>
+  <link rel="stylesheet" href="style.css"> <!-- Altere se o nome do seu CSS for outro -->
+</head>
+<body>
+
+  <header>
+    <h1>Formulário de Contato</h1>
+    <nav>
+      <a href="index.html">Página Inicial</a>
+    </nav>
+  </header>
+
+  <!-- Aqui vai o formulário -->
+  <section id="formulario">
+    <h2>Preencha os dados abaixo</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações Técnicas</legend>
+
+        <label for="idioma">Idioma aplicado no serviço:</label>
+        <select id="idioma" name="idioma">
+          <option value="ingles">Inglês</option>
+          <option value="espanhol">Espanhol</option>
+          <option value="frances">Francês</option>
+          <option value="portugues">Português (pt-br)</option>
+        </select><br><br>
+
+        <label for="arquivo">Prototipo (PDF, DOC, DOCX, JPEG, PNG):</label>
+        <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png"><br><br>
+
+        <label>Linguagens preferidas:</label><br>
+        <input type="checkbox" name="linguagens" value="html">HTML
+        <input type="checkbox" name="linguagens" value="css">CSS
+        <input type="checkbox" name="linguagens" value="javascript">JavaScript
+        <input type="checkbox" name="linguagens" value="python">Python
+        <input type="checkbox" name="linguagens" value="java">Java<br><br>
+
+        <label>Banco de dados preferido:</label><br>
+        <input type="radio" name="banco" value="mysql">MySQL
+        <input type="radio" name="banco" value="postgres">PostgreSQL
+        <input type="radio" name="banco" value="sqlserver">SQL Server
+        <input type="radio" name="banco" value="mongo">MongoDB<br><br>
+
+        <label for="turno">Turno preferido para reuniões:</label>
+        <select id="turno" name="turno">
+          <option value="manha">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+        </select><br><br>
+
+        <label for="horario">Melhor horário:</label>
+        <input type="time" id="horario" name="horario"><br><br>
+
+        <label for="data">Previsão de entrega:</label>
+        <input type="date" id="data" name="data"><br><br>
+      </fieldset>
+
+      <input type="reset" value="Limpar">
+      <input type="submit" value="Enviar">
+    </form>
+  </section>
+
+</body>
+</html>
+<!-- 
+ -->
