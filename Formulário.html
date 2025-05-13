@@ -3,79 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulário de Contato</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #64732F;
+      padding: 20px;
+      color: #333;
+    }
+
+    header {
+      background-color: #9BA676;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #formulario {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #formulario h2 {
+      color: #3D743A;
+      margin-bottom: 25px;
+    }
+
+    form fieldset {
+      border: 2px solid #A6B57C;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      background-color: #f9f9f9;
+    }
+
+    form legend {
+      font-weight: bold;
+      color: #667338;
+      padding: 0 10px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form input[type="time"],
+    form input[type="date"],
+    form select,
+    form textarea,
+    form input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form input[type="checkbox"],
+    form input[type="radio"] {
+      margin-right: 6px;
+      margin-top: 10px;
+    }
+
+    form input[type="submit"],
+    form input[type="reset"] {
+      background-color: #3D743A;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form input[type="submit"]:hover,
+    form input[type="reset"]:hover {
+      background-color: #5E8B45;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Formulário de Contato</h1>
-    <nav>
-      <a href="index.html">Página Inicial</a>
-    </nav>
-  </header>
-
-  
-  <section id="formulario">
+   <section id="formulario">
     <h2>Preencha os dados abaixo</h2>
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form action="sucesso.html" method= "get" >
       <fieldset>
         <legend>Dados Pessoais</legend>
         
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
+        <input type="text" id="nome" name="nome" required>
 
         <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" required><br><br>
+        <input type="text" id="sobrenome" name="sobrenome" required>
 
         <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required><br><br>
+        <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
 
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required>
 
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
       </fieldset>
 
       <fieldset>
         <legend>Informações Técnicas</legend>
 
         <label for="idioma">Idioma aplicado no serviço:</label>
-        <select id="idioma" name="idioma">
+        <select id="idioma" name="idioma" required>
+          <option value="">Selecione</option>
           <option value="ingles">Inglês</option>
           <option value="espanhol">Espanhol</option>
           <option value="frances">Francês</option>
           <option value="portugues">Português (pt-br)</option>
-        </select><br><br>
+        </select>
 
-        <label for="arquivo">Prototipo (PDF, DOC, DOCX, JPEG, PNG):</label>
-        <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png"><br><br>
+        <label for="arquivo">Protótipo (PDF, DOC, DOCX, JPEG, PNG):</label>
+        <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png" required>
 
-        <label>Linguagens preferidas:</label><br>
+        <label>Linguagens preferidas:</label>
         <input type="checkbox" name="linguagens" value="html">HTML
         <input type="checkbox" name="linguagens" value="css">CSS
         <input type="checkbox" name="linguagens" value="javascript">JavaScript
         <input type="checkbox" name="linguagens" value="python">Python
-        <input type="checkbox" name="linguagens" value="java">Java<br><br>
+        <input type="checkbox" name="linguagens" value="java">Java
 
-        <label>Banco de dados preferido:</label><br>
-        <input type="radio" name="banco" value="mysql">MySQL
+        <label>Banco de dados recomendado:</label>
+        <input type="radio" name="banco" value="mysql" required>MySQL
         <input type="radio" name="banco" value="postgres">PostgreSQL
         <input type="radio" name="banco" value="sqlserver">SQL Server
-        <input type="radio" name="banco" value="mongo">MongoDB<br><br>
+        <input type="radio" name="banco" value="mongo">MongoDB
 
         <label for="turno">Turno preferido para reuniões:</label>
-        <select id="turno" name="turno">
+        <select id="turno" name="turno" required>
+          <option value="">Selecione</option>
           <option value="manha">Manhã</option>
           <option value="tarde">Tarde</option>
           <option value="noite">Noite</option>
-        </select><br><br>
+        </select>
 
         <label for="horario">Melhor horário:</label>
-        <input type="time" id="horario" name="horario"><br><br>
+        <input type="time" id="horario" name="horario" required>
 
         <label for="data">Previsão de entrega:</label>
-        <input type="date" id="data" name="data"><br><br>
+        <input type="date" id="data" name="data" required>
       </fieldset>
 
       <input type="reset" value="Limpar">
@@ -85,5 +189,3 @@
 
 </body>
 </html>
-<!-- 
- -->
